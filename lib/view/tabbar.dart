@@ -26,7 +26,7 @@ class _TabbarsState extends State<Tabbars> {
           backgroundColor: Color(0xff191C2D),
           centerTitle: false,
           title: Text("PhotoShop Guide"),
-          actions: [Icon(Icons.more_vert)],
+          actions: const [Icon(Icons.more_vert)],
           bottom: TabBar(
             indicator: BoxDecoration(
                 border: Border.all(
@@ -43,7 +43,7 @@ class _TabbarsState extends State<Tabbars> {
             unselectedLabelColor: Colors.white,
             indicatorSize: TabBarIndicatorSize.tab,
             labelStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
-            tabs: [
+            tabs: const [
               Tab(text: "Tools"),
               Tab(text: "Introduction"),
               Tab(text: "Interface"),
@@ -57,7 +57,7 @@ class _TabbarsState extends State<Tabbars> {
           ),
         ),
         body: TabBarView(
-          children: [
+          children: const [
             HomeScreen(),
             HomeScreen(),
             HomeScreen(),
