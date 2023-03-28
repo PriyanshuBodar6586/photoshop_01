@@ -3,7 +3,7 @@ import 'package:sizer/sizer.dart';
 
 
 Color backGroundColor = Color(0xFF191C2D);
-Color textColor = const Color(0xFF2D305A);
+Color textColor = const Color(0xFFFFFFFF);
 
 Widget height(double height) {
   return SizedBox(
