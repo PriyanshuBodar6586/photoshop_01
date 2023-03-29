@@ -74,6 +74,22 @@ class _OptionsState extends State<Options> {
                     canShowPaginationDialog: false,
                     canShowPasswordDialog: false,
                     initialScrollOffset: Offset.fromDirection(20),
+                    onPageChanged: (details) {
+                      /*
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                       */
+                    },
                   )),
             )
           ],

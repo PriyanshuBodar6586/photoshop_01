@@ -74,6 +74,22 @@ class _InterFaceState extends State<InterFace> {
                     canShowPaginationDialog: false,
                     canShowPasswordDialog: false,
                     initialScrollOffset: Offset.fromDirection(20),
+                    onPageChanged: (details) {
+                      /*
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                       */
+                    },
                   )),
             )
           ],

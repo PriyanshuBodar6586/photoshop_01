@@ -74,6 +74,22 @@ class _PenelsState extends State<Penels> {
                     canShowPaginationDialog: false,
                     canShowPasswordDialog: false,
                     initialScrollOffset: Offset.fromDirection(20),
+                    onPageChanged: (details) {
+                      /*
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                      *
+                       */
+                    },
                   )),
             )
           ],

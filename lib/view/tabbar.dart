@@ -20,18 +20,14 @@ class _TabbarsState extends State<Tabbars> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 9, // length of tabs
+      length: 7, // length of tabs
       child: Scaffold(
-        drawer: const Drawer(
-        backgroundColor: Color(0xff191C2D),
-          elevation: 30,
-          shadowColor: Colors.white,
-        ),
+
         backgroundColor: Colors.black,
         appBar: AppBar(
 
           backgroundColor: const Color(0xff191C2D),
-          centerTitle: false,
+          centerTitle: true,
           title: const Text("PhotoShop Guide"),
           actions: const [Icon(Icons.more_vert)],
           bottom: TabBar(
@@ -57,8 +53,6 @@ class _TabbarsState extends State<Tabbars> {
               Tab(text: "Options Bar"),
               Tab(text: "Menu Bar"),
               Tab(text: "Panels"),
-              Tab(text: "Basic Work"),
-              Tab(text: "Effacts"),
               Tab(text: "Shortcuts"),
             ],
           ),
@@ -71,8 +65,6 @@ class _TabbarsState extends State<Tabbars> {
             Options(),
             Menu(),
             Penels(),
-            HomeScreen(),
-            HomeScreen(),
             Shortcutss(),
           ],
         ),
