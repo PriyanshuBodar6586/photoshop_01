@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:photoshop_01/view/home_screen.dart';
+import 'package:photoshop_01/view/splash_screen.dart';
 import 'package:photoshop_01/view/tabbar.dart';
 
 import 'package:sizer/sizer.dart';
@@ -22,7 +23,7 @@ void main() async {
         return  GetMaterialApp(
           debugShowCheckedModeBanner: false,
           routes: {
-            '/': (contest) =>Tabbars(),
+            '/': (contest) =>splash_screen(),
           },
         );
       },

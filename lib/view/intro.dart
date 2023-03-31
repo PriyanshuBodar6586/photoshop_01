@@ -15,7 +15,7 @@ class _IntroScreenState extends State<IntroScreen> {
     return Scaffold(
       backgroundColor: backGroundColor,
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(
+        physics: const BouncingScrollPhysics(
           decelerationRate: ScrollDecelerationRate.normal,
         ),
         child: Column(

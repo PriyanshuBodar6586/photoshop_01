@@ -1,6 +1,7 @@
-// ignore_for_file: file_names
+
 
 import 'package:get/get.dart';
+
 
 class HomeController extends GetxController {
   List image = [
@@ -31,4 +32,6 @@ class HomeController extends GetxController {
     "assets/image/Zom.png",
     null,
   ];
+
+
 }

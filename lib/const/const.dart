@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
 Color backGroundColor = const Color(0xFF191C2D);
@@ -67,25 +69,34 @@ text(String pStrText, double pDblFontSize,
   );
 }
 
-toolTxt(
+back() {
+  SystemChrome.setPreferredOrientations(
+    [
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ],
+  ).then((value) => Get.back());
+}
 
-    String pStrImg,
-    String pStrImgTxt,
-    String pStrIntro,
-    String pStrIntroDetail,
-    String pStrUse,
-    String pStrUseDetail,
-    {double? pDblHeight}) {
+toolTxt(String pStrImg, List<Widget> children, {double? pDblHeight}) {
   return CustomScrollView(
     slivers: [
       SliverAppBar(
+        leading: InkWell(
+            onTap: () {
+              SystemChrome.setPreferredOrientations(
+                [
+                  DeviceOrientation.portraitUp,
+                  DeviceOrientation.portraitDown,
+                ],
+              ).then((value) => Get.back());
+            },
+            child: const Icon(Icons.arrow_back)),
         elevation: 00,
         backgroundColor: backGroundColor,
         pinned: true,
         expandedHeight: 50.h,
         flexibleSpace: FlexibleSpaceBar(
-
-
           background: Image.asset(pStrImg,
               fit: BoxFit.cover, height: pDblHeight ?? 45.h),
         ),
@@ -96,53 +107,7 @@ toolTxt(
           (BuildContext context, int index) {
             return Padding(
               padding: EdgeInsets.symmetric(horizontal: 12, vertical: 3.h),
-              child: Column(
-                children: [
-                  Container(
-                    height: 23.h,
-                    width: 100.w,
-                    color: Colors.black.withOpacity(0.7),
-                  ),
-                  height(3.h),
-                  text(pStrImgTxt, 12.sp,
-                      pClrColor: Colors.white, pTxtAlign: TextAlign.start),
-                  height(3.h),
-                  text(
-                    pStrIntro,
-                    16.sp,
-                    pClrColor: const Color(0xff0dd294e),
-                    pFontWeight: FontWeight.bold,
-                    pTxtAlign: TextAlign.start,
-                  ),
-                  text(
-                    pStrIntroDetail,
-                    12.sp,
-                    pClrColor: textColor,
-                    pFontWeight: FontWeight.w500,
-                    pTxtAlign: TextAlign.start,
-                  ),
-                  text(
-                    pStrUse,
-                    16.sp,
-                    pClrColor: Color(0xff0dd294e),
-                    pFontWeight: FontWeight.bold,
-                    pTxtAlign: TextAlign.start,
-                  ),
-                  text(
-                    pStrUseDetail,
-                    12.sp,
-                    pClrColor: textColor,
-                    pFontWeight: FontWeight.w500,
-                    pTxtAlign: TextAlign.start,
-                  ),
-                  height(3.h),
-                  Container(
-                    height: 23.h,
-                    width: 100.w,
-                    color: Colors.white70.withOpacity(0.7),
-                  ),
-                ],
-              ),
+              child: Column(children: children),
             );
           },
         ),
